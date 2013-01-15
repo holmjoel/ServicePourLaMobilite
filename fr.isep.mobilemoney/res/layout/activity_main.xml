@@ -1,0 +1,123 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+    <Button
+        android:id="@+id/send_money"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginBottom="0dp"
+        android:text="@string/send_money"
+        android:onClick="onClick" />
+
+    <Button
+        android:id="@+id/request_money"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/send_money"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginBottom="0dp"
+        android:text="@string/request_money"
+        android:onClick="onClick" />
+    
+    <Button
+        android:id="@+id/accept_request"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/request_money"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginBottom="0dp"
+        android:text="@string/accept_request"
+        android:onClick="onClick" />
+
+    <Button
+        android:id="@+id/manage_account"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/accept_request"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginBottom="0dp"
+        android:text="@string/manage_account"
+        android:onClick="onClick" />
+    
+    <Button
+        android:id="@+id/history"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/manage_account"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginBottom="0dp"
+        android:text="@string/history"
+        android:onClick="onClick" />
+
+	<Button
+        android:id="@+id/manage_pseudo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/history"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginBottom="0dp"
+        android:text="@string/manage_alias"
+        android:onClick="onClick" />
+
+	<Button
+        android:id="@+id/invite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/manage_pseudo"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginBottom="0dp"
+        android:text="@string/invite"
+        android:onClick="onClick" />
+
+	<Button
+        android:id="@+id/help"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/invite"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginBottom="0dp"
+        android:text="@string/help"
+        android:onClick="onClick" />	
+        
+	<Button
+        android:id="@+id/log_out"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/help"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginBottom="0dp"
+        android:text="@string/log_out"
+        android:onClick="onClick" />	
+</RelativeLayout>
