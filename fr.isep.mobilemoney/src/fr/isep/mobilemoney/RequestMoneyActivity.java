@@ -35,7 +35,7 @@ public class RequestMoneyActivity extends MoneyActivity {
 		} else {
 			this.amount = Double.parseDouble(amountStr);
 
-			SharedPreferences settings = getPreferences(MODE_PRIVATE);
+			SharedPreferences settings = getSharedPreferences("user_data", MODE_PRIVATE);
 			int userId = settings.getInt("userId", -1);
 
 			RequestJSON requestObj = new RequestJSON();
@@ -57,7 +57,7 @@ public class RequestMoneyActivity extends MoneyActivity {
 			message = response.getMessage();
 		} else {
 			message = String.format(res.getString(R.string.money_requested),
-					amount, targetUser);
+					amount, targetUser) + response.getTransactionNumber();
 		}
 
 		goToScreen(R.id.main_menu, message);

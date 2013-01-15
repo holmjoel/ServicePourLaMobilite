@@ -35,7 +35,7 @@ public class LoginActivity extends MoneyActivity {
 			showDialog(res.getString(R.string.invalid_input), res.getString(R.string.invalid_pin_length));
 		} else {
 			RequestJSON requestObj = new RequestJSON();
-			requestObj.setAction("sendMoney");
+			requestObj.setAction("login");
 			requestObj.setNumberOrAlias(mobileOrAlias);
 			requestObj.setPin(pin);
 
@@ -53,7 +53,7 @@ public class LoginActivity extends MoneyActivity {
 			message = response.getMessage();
 			showDialog(res.getString(R.string.login_unsuccessful), message);
 		} else {
-			SharedPreferences settings = getPreferences(MODE_PRIVATE);
+			SharedPreferences settings = getSharedPreferences("user_data", MODE_PRIVATE);
 		    SharedPreferences.Editor editor = settings.edit();
 		    editor.putInt("userId", (int) response.getTransactionNumber());
 		    editor.commit();

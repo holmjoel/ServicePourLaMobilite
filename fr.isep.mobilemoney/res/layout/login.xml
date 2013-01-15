@@ -11,7 +11,7 @@
         android:layout_margin="10dp"
         android:text="@string/login"
         android:textAppearance="?android:attr/textAppearanceLarge" />
-
+	
     <EditText
         android:id="@+id/number_or_alias"
         android:layout_width="wrap_content"
@@ -19,7 +19,7 @@
         android:layout_alignLeft="@+id/title"
         android:layout_below="@+id/title"
         android:layout_marginTop="22dp"
-        android:text="@string/number_or_alias"
+        android:hint="@string/number_or_alias"
         android:ems="10" >
 
         <requestFocus />
@@ -33,7 +33,7 @@
         android:layout_below="@+id/number_or_alias"
         android:layout_marginTop="20dp"
         android:ems="10"
-        android:text="@string/pin"
+        android:hint="@string/pin"
         android:inputType="numberPassword"
         android:maxLength="4" />
 
@@ -41,9 +41,10 @@
         android:id="@+id/login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_centerVertical="true"
-        android:text="@string/login"
+        android:layout_below="@+id/pin"
+        android:layout_margin="20dp"
+        android:text="@string/ok"
+        android:ems="10"
         android:onClick="login" />
 
 </RelativeLayout>

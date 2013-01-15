@@ -23,10 +23,10 @@ public class SendMoneyActivity extends MoneyActivity {
 		mTargetUser = (EditText) findViewById(R.id.number_or_alias);
 		mAmount = (EditText) findViewById(R.id.amount);
 		
-		SharedPreferences settings = getPreferences(MODE_PRIVATE);
+		/*SharedPreferences settings = getPreferences(MODE_PRIVATE);
 	    SharedPreferences.Editor editor = settings.edit();
 	    editor.putInt("userId", 1);
-	    editor.commit();
+	    editor.commit();*/
 	}
 
 	public void sendMoney(View clickedButton) {
@@ -39,7 +39,7 @@ public class SendMoneyActivity extends MoneyActivity {
 		} else {
 			this.amount = Double.parseDouble(amountStr);
 
-			SharedPreferences settings = getPreferences(MODE_PRIVATE);
+			SharedPreferences settings = getSharedPreferences("user_data", MODE_PRIVATE);
 			int userId = settings.getInt("userId", -1);
 
 			RequestJSON requestObj = new RequestJSON();
@@ -57,20 +57,22 @@ public class SendMoneyActivity extends MoneyActivity {
 
 		String message;
 		Resources res = getResources();
-
+		
 		if (!response.isSuccess()) {
+			// TODO invite if user doens't exist
 			message = response.getMessage();
-		} else if (response.isUserExisted()) {
-			String moneySent = String.format(
-					res.getString(R.string.money_sent), amount, targetUser);
-			String newBalance = String.format(
-					res.getString(R.string.current_balance),
-					response.getBalance());
-			message = moneySent + " " + newBalance;
+			/*if (!response.isUserExisted()) {
+				String moneySent = String.format(
+						res.getString(R.string.money_sent_new_user), amount,
+						targetUser);
+				String newBalance = String.format(
+						res.getString(R.string.current_balance),
+						response.getBalance());
+				message = moneySent + " " + newBalance;
+			}*/
 		} else {
 			String moneySent = String.format(
-					res.getString(R.string.money_sent_new_user), amount,
-					targetUser);
+					res.getString(R.string.money_sent), amount, targetUser);
 			String newBalance = String.format(
 					res.getString(R.string.current_balance),
 					response.getBalance());

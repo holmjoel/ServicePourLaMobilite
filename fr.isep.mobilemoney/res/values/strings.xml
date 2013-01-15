@@ -30,6 +30,7 @@
     
     <string name="welcome">Welcome! You are logged in as user %1$s.</string>
     <string name="login_unsuccessful">Login unsuccessful</string>
+    <string name="not_logged_in">Please log in.</string>
     
     <string name="current_balance">Your current balance is %1$,.2f €.</string>
     

@@ -11,11 +11,6 @@ public class MainActivity extends MoneyActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		
-		SharedPreferences settings = getPreferences(MODE_PRIVATE);
-	    SharedPreferences.Editor editor = settings.edit();
-	    editor.putInt("userId", 1);
-	    editor.commit();
 	}
 
 	@Override

@@ -5,6 +5,7 @@ import java.io.IOException;
 import org.apache.http.client.ClientProtocolException;
 
 import com.google.gson.Gson;
+import com.google.gson.JsonSyntaxException;
 
 import fr.isep.jsonobjects.RequestJSON;
 import fr.isep.jsonobjects.ResponseJSON;
@@ -13,9 +14,10 @@ import android.os.AsyncTask;
 
 public class NetworkingTask extends AsyncTask<RequestJSON, Void, ResponseJSON> {
 
-	private final static String URL = "http://172.16.250.153:8080/GR50_MobileMoneyServer/MobileMoneyServer";
-	// = "http://10.30.248.148:8080/GR50_MobileMoneyServer/MobileMoneyServer";
-	// = "http://192.168.51.103:8080/GR50_MobileMoneyServer/MobileMoneyServer";
+	private final static String URL =
+			"http://10.30.248.148:8080/GR50_MobileMoneyServer/MobileMoneyServer";
+	//		"http://172.16.250.153:8080/GR50_MobileMoneyServer/MobileMoneyServer";
+	// 		"http://192.168.51.103:8080/GR50_MobileMoneyServer/MobileMoneyServer";
 	
 	private MoneyActivity caller;
 	
@@ -57,7 +59,11 @@ public class NetworkingTask extends AsyncTask<RequestJSON, Void, ResponseJSON> {
 	    	response = new ResponseJSON();
 			response.setSuccess(false);
 			response.setMessage("There was an error connecting to the server. Verify that you are connected to the internet and try again.");
-	    }//*/
+		} catch (JsonSyntaxException e) {
+	    	response = new ResponseJSON();
+			response.setSuccess(false);
+			response.setMessage("I got non-Json from the server");
+	    }
 		
 		return response;
 	}

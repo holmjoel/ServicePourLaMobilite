@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.View;
 import fr.isep.jsonobjects.ResponseJSON;
@@ -13,9 +15,18 @@ public abstract class MoneyActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		
+		//Show message (if applicable)
 		Bundle b = getIntent().getExtras();
 		if (b != null){
 			showDialog("Result", b.getString("message"));
+		}
+		
+		//Check if logged in and redirect if not
+		SharedPreferences settings = getSharedPreferences("user_data", MODE_PRIVATE);
+		if (!(settings.contains("userId")) && !(this.getClass().getName().equals("fr.isep.mobilemoney.LoginActivity"))){
+		    Resources res = getResources();
+		    goToScreen(R.id.login, res.getString(R.string.not_logged_in));
 		}
 	}
 	
@@ -40,7 +51,7 @@ public abstract class MoneyActivity extends Activity {
 				activityIntent = new Intent(this, AcceptRequestActivity.class);
 				break;
 			
-			case R.id.log_out:
+			case R.id.login:
 				activityIntent = new Intent(this, LoginActivity.class);
 				break;
 				
@@ -61,7 +72,15 @@ public abstract class MoneyActivity extends Activity {
 		goToScreen(clickedButton.getId(), null);
 	}
 	
-	protected void showDialog(String title, String message){
+	public void logOut(View clickedButton){
+		SharedPreferences settings = getSharedPreferences("user_data", MODE_PRIVATE);
+	    SharedPreferences.Editor editor = settings.edit();
+	    editor.remove("userId");
+	    editor.commit();
+	    goToScreen(R.id.login, null);
+	}
+	
+	public void showDialog(String title, String message){
 		   new AlertDialog.Builder(this)
 		      .setMessage(message)
 		      .setTitle(title)

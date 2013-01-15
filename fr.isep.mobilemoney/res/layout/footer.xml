@@ -35,7 +35,7 @@
         android:text="@string/log_out"
         android:layout_marginRight="20dp"
         android:ems="10"
-        android:onClick="onClick" />
+        android:onClick="logOut" />
     </TableRow>
 
 </TableLayout>

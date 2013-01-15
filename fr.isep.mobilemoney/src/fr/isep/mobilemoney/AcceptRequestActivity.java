@@ -30,7 +30,7 @@ public class AcceptRequestActivity extends MoneyActivity {
 		} else {
 			this.transaction = Long.parseLong(transactionStr);
 
-			SharedPreferences settings = getPreferences(MODE_PRIVATE);
+			SharedPreferences settings = getSharedPreferences("user_data", MODE_PRIVATE);
 			int userId = settings.getInt("userId", -1);
 
 			RequestJSON requestObj = new RequestJSON();
