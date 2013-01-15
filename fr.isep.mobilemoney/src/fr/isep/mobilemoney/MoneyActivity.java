@@ -39,6 +39,10 @@ public abstract class MoneyActivity extends Activity {
 			case R.id.accept_request:
 				activityIntent = new Intent(this, AcceptRequestActivity.class);
 				break;
+				
+			case R.id.history:
+				activityIntent = new Intent(this, AccountHistory.class);
+				break;
 			
 			case R.id.log_out:
 				activityIntent = new Intent(this, LoginActivity.class);
