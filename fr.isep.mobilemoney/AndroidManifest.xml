@@ -22,18 +22,22 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="fr.isep.mobilemoney.SendMoneyActivity">
+        <activity android:name="fr.isep.mobilemoney.SendMoneyActivity" >
         </activity>
-        <activity android:name="fr.isep.mobilemoney.RequestMoneyActivity">
+        <activity android:name="fr.isep.mobilemoney.RequestMoneyActivity" >
         </activity>
-        <activity android:name="fr.isep.mobilemoney.AcceptRequestActivity">
+        <activity android:name="fr.isep.mobilemoney.AcceptRequestActivity" >
         </activity>
         <activity
             android:name="fr.isep.mobilemoney.LoginActivity"
             android:label="@string/app_name" >
         </activity>
+        <activity
+            android:name="fr.isep.mobilemoney.AccountHistory"
+            android:label="@string/title_activity_account_history" >
+        </activity>
     </application>
-    
-    <uses-permission android:name="android.permission.INTERNET" /> 
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>

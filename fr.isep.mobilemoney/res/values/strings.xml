@@ -4,7 +4,6 @@
     <string name="app_name">Mobile Money</string>
     <string name="hello_world">Hello world!</string>
     <string name="menu_settings">Settings</string>
-    
     <string name="send_money">Send money</string>
     <string name="request_money">Request money</string>
     <string name="accept_request">Accept request for money</string>
@@ -14,28 +13,26 @@
     <string name="invite">Invite a friend</string>
     <string name="help">Help</string>
     <string name="log_out">Log out</string>
-    
     <string name="number_or_alias">Mobile number or alias</string>
     <string name="amount">Amount</string>
     <string name="ok">OK</string>
     <string name="login">Log In</string>
     <string name="pin">Pin number</string>
     <string name="main_menu">Main menu</string>
+
     <color name="divider_background">#000000</color>
+
     <string name="request_number">Transaction number</string>
-    
     <string name="invalid_input">Invalid input.</string>
     <string name="invalid_empty">All fields must be filled.</string>
     <string name="invalid_pin_length">The PIN consists of 4 digits.</string>
-    
     <string name="welcome">Welcome! You are logged in as user %1$s.</string>
     <string name="login_unsuccessful">Login unsuccessful</string>
-    
     <string name="current_balance">Your current balance is %1$,.2f €.</string>
-    
     <string name="money_sent">%1$,.2f € has been sent to user %2$s.</string>
     <string name="money_sent_new_user">%1$,.2f € and an invitation to join MobileMoney has been sent to phone number %2$s. The user needs to sign up to receive the money.</string>
     <string name="money_requested">%1$,.2f € has been requested from user %2$s.</string>
     <string name="money_received">%1$,.2f € has been received from user %2$s.</string>
-    
+    <string name="title_activity_account_history">AccountHistory</string>
+
 </resources>
