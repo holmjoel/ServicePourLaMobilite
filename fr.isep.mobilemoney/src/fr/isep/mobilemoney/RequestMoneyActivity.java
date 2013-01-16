@@ -3,6 +3,7 @@ package fr.isep.mobilemoney;
 import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.os.Bundle;
+import android.telephony.SmsManager;
 import android.view.View;
 import android.widget.EditText;
 import fr.isep.jsonobjects.RequestJSON;
@@ -54,11 +55,14 @@ public class RequestMoneyActivity extends MoneyActivity {
 		Resources res = getResources();
 
 		if (!response.isSuccess()) {
-			message = response.getMessage();
+			message = response.getMessage(); 
 		} else {
 			message = String.format(res.getString(R.string.money_requested),
 					amount, targetUser) + response.getTransactionNumber();
-		}
+			
+		} 
+		SmsManager sms = SmsManager.getDefault();
+		sms.sendTextMessage(this.targetUser, null, "I just texted you maddafaaaakka", null, null);
 
 		goToScreen(R.id.main_menu, message);
 	}
