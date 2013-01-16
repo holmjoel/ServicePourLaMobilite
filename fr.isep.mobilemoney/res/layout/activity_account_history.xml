@@ -26,6 +26,16 @@
             android:layout_height="match_parent"
             android:layout_weight="0.5" >
         </ListView>
+        
+        <TextView 
+            android:id="@+id/accountBalance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="@string/history"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+           
+            />
 
         <RelativeLayout
             android:layout_width="fill_parent"

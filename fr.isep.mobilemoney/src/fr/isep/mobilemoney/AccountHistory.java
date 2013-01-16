@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 import fr.isep.jsonobjects.RequestJSON;
 import fr.isep.jsonobjects.ResponseJSON;
 import fr.isep.jsonobjects.Transaction;
@@ -73,9 +74,12 @@ public class AccountHistory extends MoneyActivity {
 		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
 		  android.R.layout.simple_list_item_1, android.R.id.text1, transactionsArray);
 
-
 		// Assign adapter to ListView
 		listView.setAdapter(adapter); 
+		
+		//Set balance
+		TextView balance = (TextView) this.findViewById(R.id.accountBalance);
+		balance.setText("Account balance: " + response.getBalance());
 		
 		
 	}
