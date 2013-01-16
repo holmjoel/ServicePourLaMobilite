@@ -1,6 +1,5 @@
 package fr.isep.mobilemoney;
 
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
 import fr.isep.jsonobjects.ResponseJSON;

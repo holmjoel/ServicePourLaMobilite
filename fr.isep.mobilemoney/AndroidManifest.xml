@@ -36,6 +36,14 @@
             android:name="fr.isep.mobilemoney.AccountHistory"
             android:label="@string/title_activity_account_history" >
         </activity>
+        <activity
+            android:name="fr.isep.mobilemoney.ManageAccount"
+            android:label="@string/title_activity_manage_account" >
+        </activity>
+        <activity
+            android:name="fr.isep.mobilemoney.Recharge"
+            android:label="@string/title_activity_recharge" >
+        </activity>
     </application>
 
     <uses-permission android:name="android.permission.INTERNET" />
