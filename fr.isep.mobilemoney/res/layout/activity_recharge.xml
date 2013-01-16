@@ -1,0 +1,80 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Recharge" >
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="@string/recharge"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+    
+    <TextView
+        android:id="@+id/asking_amount"
+        android:layout_margin="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:text="@string/asking_amount" />
+    
+    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/possible_amounts"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+ 
+    <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dip" >
+ 
+        <Button
+            android:id="@+id/money20"
+            android:text="20 €" />
+ 
+        <Button
+            android:id="@+id/money40"
+            android:text="40 €" />
+    </TableRow>
+    
+    <TableRow
+        android:id="@+id/tableRow2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dip" >
+ 
+        <Button
+            android:id="@+id/money60"
+            android:text="60 €" />
+ 
+        <Button
+            android:id="@+id/money80"
+            android:text="80 €" />
+    </TableRow>
+    
+    <TableRow
+        android:id="@+id/tableRow3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dip" >
+ 
+        <Button
+            android:id="@+id/money100"
+            android:text="100 €" />
+ 
+    </TableRow>
+    </TableLayout>
+    
+    <RelativeLayout
+        android:layout_width="fill_parent" android:layout_height="fill_parent"
+        android:layout_below="@+id/possible_amounts"
+        android:layout_alignParentBottom="true" >
+    	<include
+        	android:id="@+id/footer"
+        	layout="@layout/footer" />
+    </RelativeLayout>
+
+</RelativeLayout>

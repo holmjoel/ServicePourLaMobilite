@@ -8,6 +8,8 @@
     <string name="request_money">Request money</string>
     <string name="accept_request">Accept request for money</string>
     <string name="manage_account">Manage my account</string>
+    <string name="recharge">Recharge</string>
+    <string name="withdrawal">Withdrawal</string>
     <string name="history">Account history</string>
     <string name="manage_alias">Manage alias</string>
     <string name="invite">Invite a friend</string>
@@ -29,12 +31,15 @@
     <string name="welcome">Welcome! You are logged in as user %1$s.</string>
     <string name="login_unsuccessful">Login unsuccessful</string>
     <string name="not_logged_in">Please log in.</string>
-    
     <string name="current_balance">Your current balance is %1$,.2f €.</string>
     <string name="money_sent">%1$,.2f € has been sent to user %2$s.</string>
     <string name="money_sent_new_user">%1$,.2f € and an invitation to join MobileMoney has been sent to phone number %2$s. The user needs to sign up to receive the money.</string>
     <string name="money_requested">%1$,.2f € has been requested from user %2$s.</string>
     <string name="money_received">%1$,.2f € has been received from user %2$s.</string>
     <string name="title_activity_account_history">AccountHistory</string>
+    <string name="title_activity_manage_account">ManageAccount</string>
+    <string name="title_activity_recharge">Recharge</string>
+    
+    <string name="asking_amount">Amount of the recharge?</string>
 
 </resources>
