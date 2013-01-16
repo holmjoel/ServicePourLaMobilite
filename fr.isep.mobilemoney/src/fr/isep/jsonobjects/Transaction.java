@@ -40,7 +40,10 @@ public class Transaction {
 	public void setAmount(double amount) {
 		this.amount = amount;
 	}
-	
+	@Override
+	public String toString(){
+		return "Date: " + this.date + " Type: " + this.typeOfTransaction + " Amount: " + this.amount;
+	}
 	
 	
 }

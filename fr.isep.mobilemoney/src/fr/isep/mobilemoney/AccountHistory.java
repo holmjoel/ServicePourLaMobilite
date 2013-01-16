@@ -53,7 +53,7 @@ public class AccountHistory extends MoneyActivity {
 
 	@Override
 	public void showResult(ResponseJSON response) {
-		List<Transaction> listOfTransactiosn = response.getListOfTransactions();
+		List<Transaction> listOfTransactions = response.getListOfTransactions();
 		
 		ListView listView = (ListView) findViewById(R.id.transactions);
 		String[] values = new String[] { "Android", "iPhone", "WindowsMobile",
@@ -66,8 +66,12 @@ public class AccountHistory extends MoneyActivity {
 		// Third parameter - ID of the TextView to which the data is written
 		// Forth - the Array of data
 
+		String[] transactionsArray = new String[listOfTransactions.size()];
+		for(int i = 0; i < listOfTransactions.size(); i++){
+			transactionsArray[i] = listOfTransactions.get(i).toString();
+		}
 		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
-		  android.R.layout.simple_list_item_1, android.R.id.text1, values);
+		  android.R.layout.simple_list_item_1, android.R.id.text1, transactionsArray);
 
 
 		// Assign adapter to ListView
