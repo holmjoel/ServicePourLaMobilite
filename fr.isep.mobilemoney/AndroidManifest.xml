@@ -44,6 +44,10 @@
             android:name="fr.isep.mobilemoney.Recharge"
             android:label="@string/title_activity_recharge" >
         </activity>
+        <activity
+            android:name="fr.isep.mobilemoney.Withdrawal"
+            android:label="@string/title_activity_withdrawal" >
+        </activity>
     </application>
 
     <uses-permission android:name="android.permission.INTERNET" />

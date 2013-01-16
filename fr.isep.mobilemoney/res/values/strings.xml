@@ -39,8 +39,9 @@
     <string name="title_activity_account_history">AccountHistory</string>
     <string name="title_activity_manage_account">ManageAccount</string>
     <string name="title_activity_recharge">Recharge</string>
-    
     <string name="asking_amount">Amount of the recharge?</string>
     <string name="money_recharged">Your mobile account has been recharged by %1$,.2f €.</string>
+    <string name="money_withdrawed">You have withdrawed %1$,.2f € from your mobile account.</string>
+    <string name="title_activity_withdrawal">Withdrawal</string>
 
 </resources>
