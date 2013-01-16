@@ -55,6 +55,10 @@ public abstract class MoneyActivity extends Activity {
 				activityIntent = new Intent(this, ManageAccount.class);
 				break;
 				
+			case R.id.recharge:
+				activityIntent = new Intent(this, Recharge.class);
+				break;
+				
 			case R.id.history:
 				activityIntent = new Intent(this, AccountHistory.class);
 				break;

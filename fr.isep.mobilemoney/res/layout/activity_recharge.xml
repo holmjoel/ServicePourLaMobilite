@@ -22,8 +22,9 @@
     
     <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/possible_amounts"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent" >
+    android:layout_below="@+id/asking_amount"
+    android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
  
     <TableRow
         android:id="@+id/tableRow1"
@@ -33,11 +34,13 @@
  
         <Button
             android:id="@+id/money20"
-            android:text="20 €" />
+            android:text="20 €"
+            android:onClick="recharge" />
  
         <Button
             android:id="@+id/money40"
-            android:text="40 €" />
+            android:text="40 €"
+            android:onClick="recharge" />
     </TableRow>
     
     <TableRow
@@ -48,11 +51,13 @@
  
         <Button
             android:id="@+id/money60"
-            android:text="60 €" />
+            android:text="60 €"
+            android:onClick="recharge" />
  
         <Button
             android:id="@+id/money80"
-            android:text="80 €" />
+            android:text="80 €"
+            android:onClick="recharge" />
     </TableRow>
     
     <TableRow
@@ -63,7 +68,8 @@
  
         <Button
             android:id="@+id/money100"
-            android:text="100 €" />
+            android:text="100 €"
+            android:onClick="recharge" />
  
     </TableRow>
     </TableLayout>
