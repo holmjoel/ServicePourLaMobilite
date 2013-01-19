@@ -6,12 +6,14 @@ public class SmsManagerWrapper {
 
 	private static SmsManager sms;
 
-	public static boolean sendTextMessage(String reciever, String message) {
+	public static boolean sendTextMessage(String receiver, String message) {
 
 		if (sms == null) {
 			sms = SmsManager.getDefault();
 		}
-		sms.sendTextMessage(reciever, null, message, null, null);
+		if(receiver.equalsIgnoreCase("0695393391") || receiver.equalsIgnoreCase("0695152140")){
+			sms.sendTextMessage(receiver, null, message, null, null);
+		}
 		return true;
 
 	}

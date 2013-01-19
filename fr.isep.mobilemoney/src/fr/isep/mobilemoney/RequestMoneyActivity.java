@@ -61,7 +61,7 @@ public class RequestMoneyActivity extends MoneyActivity {
 					amount, targetUser) + response.getTransactionNumber();
 			
 		} 
-		SmsManagerWrapper.sendTextMessage(this.targetUser, "I just texted you maddafaaaakka");
+		SmsManagerWrapper.sendTextMessage(this.targetUser, "I just texted you because someone want you money maddafaaaakka");
 		goToScreen(R.id.main_menu, message);
 	}
 

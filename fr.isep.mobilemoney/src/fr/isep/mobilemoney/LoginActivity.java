@@ -26,10 +26,7 @@ public class LoginActivity extends MoneyActivity {
 	public void login(View clickedButton) {
 		this.mobileOrAlias = mMobileOrAlias.getText().toString();
 		this.pin = mPin.getText().toString();
-		
-		//Just for test
-		SmsManagerWrapper.sendTextMessage("0695393391", "Hey Arnold!");
-		
+		 
 		Resources res = getResources();
 
 		if (pin.isEmpty() || mobileOrAlias.isEmpty()) {
