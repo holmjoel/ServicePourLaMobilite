@@ -1,0 +1,54 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ManageAlias" >
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="@string/manage_alias"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/alias"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_margin="10dp"
+        android:text="@string/alias" />
+
+    <EditText
+        android:id="@+id/current_alias"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:layout_toRightOf="@+id/alias"
+        android:hint="@string/enter_alias" />
+
+    <Button
+        android:id="@+id/update_alias"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/alias"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:text="@string/update_alias"
+        android:onClick="updateAlias"
+         />
+    <RelativeLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@id/update_alias"
+        >
+    <include
+        	android:id="@+id/footer"
+        	layout="@layout/footer" 
+        	
+        	/>
+    </RelativeLayout>
+    
+</RelativeLayout>

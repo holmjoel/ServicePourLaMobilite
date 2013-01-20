@@ -35,9 +35,8 @@ public class AccountHistory extends MoneyActivity {
 		
 		RequestJSON requestObj = new RequestJSON();
 		
-		SharedPreferences settings = getPreferences(MODE_PRIVATE);
-		//Should change second value to -1 later
-		int userId = settings.getInt("userId", 1);
+		SharedPreferences settings = getSharedPreferences("user_data", MODE_PRIVATE);
+		int userId = settings.getInt("userId", -1);
 		
 		requestObj.setAction("getTransactions");
 		requestObj.setUserId(userId);
@@ -57,9 +56,7 @@ public class AccountHistory extends MoneyActivity {
 		List<Transaction> listOfTransactions = response.getListOfTransactions();
 		
 		ListView listView = (ListView) findViewById(R.id.transactions);
-		String[] values = new String[] { "Android", "iPhone", "WindowsMobile",
-		  "Blackberry", "WebOS", "Ubuntu", "Windows7", "Max OS X",
-		  "Linux", "OS/2" };
+		
 
 		// Define a new Adapter
 		// First parameter - Context

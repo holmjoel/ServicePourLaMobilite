@@ -43,5 +43,10 @@
     <string name="money_recharged">Your mobile account has been recharged by %1$,.2f €.</string>
     <string name="money_withdrawed">You have withdrawed %1$,.2f € from your mobile account.</string>
     <string name="title_activity_withdrawal">Withdrawal</string>
+    <string name="title_activity_manage_alias">ManageAlias</string>
+    <string name="alias">Alias:</string>
+    <string name="enter_alias">Enter your desired alias</string>
+    <string name="update_alias">Update alias</string>
+    <string name="alias_changed">You\'ve successfully changed your alias to: </string>
 
 </resources>

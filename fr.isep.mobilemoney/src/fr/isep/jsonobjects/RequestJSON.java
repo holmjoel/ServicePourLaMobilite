@@ -1,11 +1,14 @@
 package fr.isep.jsonobjects;
 
+import fr.isep.jsonobjects.Constants.MoneyAction;
+
 public class RequestJSON {
 
 	private int userId;
 	private long transactionNumber;
 	private String action, numberOrAlias, pin;
 	private double amount;
+	private MoneyAction moneyAction;
 
 	// getter and setter methods
 
@@ -13,15 +16,30 @@ public class RequestJSON {
 
 	}
 
+	
 	public RequestJSON(int userId, long transactionNumber, String action,
-			String numberOrAlias, double amount) {
+			String numberOrAlias, String pin, double amount,
+			MoneyAction moneyAction) {
 		super();
 		this.userId = userId;
 		this.transactionNumber = transactionNumber;
 		this.action = action;
 		this.numberOrAlias = numberOrAlias;
+		this.pin = pin;
 		this.amount = amount;
+		this.moneyAction = moneyAction;
 	}
+
+
+	public MoneyAction getMoneyAction() {
+		return moneyAction;
+	}
+
+
+	public void setMoneyAction(MoneyAction moneyAction) {
+		this.moneyAction = moneyAction;
+	}
+
 
 	public int getUserId() {
 		return userId;
