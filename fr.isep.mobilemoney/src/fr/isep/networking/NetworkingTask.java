@@ -5,6 +5,7 @@ import java.io.IOException;
 import org.apache.http.client.ClientProtocolException;
 
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.google.gson.JsonSyntaxException;
 
 import fr.isep.jsonobjects.RequestJSON;
@@ -15,7 +16,8 @@ import android.os.AsyncTask;
 public class NetworkingTask extends AsyncTask<RequestJSON, Void, ResponseJSON> {
 
 	private final static String URL =
-			"http://10.30.248.148:8080/GR50_MobileMoneyServer/MobileMoneyServer";
+			"http://192.168.51.103:8080/GR50_MobileMoneyServer/MobileMoneyServer";
+	//		"http://10.30.248.148:8080/GR50_MobileMoneyServer/MobileMoneyServer";
 	//		"http://172.16.250.153:8080/GR50_MobileMoneyServer/MobileMoneyServer";
 	// 		"http://192.168.51.103:8080/GR50_MobileMoneyServer/MobileMoneyServer";
 	
@@ -29,7 +31,7 @@ public class NetworkingTask extends AsyncTask<RequestJSON, Void, ResponseJSON> {
 		RequestJSON request;
 		ResponseJSON response;
 		String reqString, resString;
-		Gson gson = new Gson();
+		Gson gson = new GsonBuilder().setDateFormat("yyyy-MM-dd").create();
 		
 		request = req[0];
 		reqString = gson.toJson(request);
