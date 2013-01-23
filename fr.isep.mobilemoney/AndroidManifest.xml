@@ -56,6 +56,10 @@
             android:name="fr.isep.mobilemoney.ManageAlias"
             android:label="@string/title_activity_manage_alias" >
         </activity>
+        <activity
+            android:name="fr.isep.mobilemoney.InviteFriend"
+            android:label="@string/title_activity_invite_friend" >
+        </activity>
     </application>
 
     <uses-permission android:name="android.permission.INTERNET" />

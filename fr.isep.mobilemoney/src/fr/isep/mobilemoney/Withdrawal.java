@@ -43,7 +43,7 @@ public class Withdrawal extends MoneyActivity {
 			int userId = settings.getInt("userId", -1);
 	
 			RequestJSON requestObj = new RequestJSON();
-			requestObj.setAction("withdrawal");
+			requestObj.setAction("withdraw");
 			requestObj.setAmount(amount);
 			requestObj.setUserId(userId);
 	
