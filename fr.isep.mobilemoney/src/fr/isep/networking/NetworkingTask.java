@@ -16,8 +16,8 @@ public class NetworkingTask extends AsyncTask<RequestJSON, Void, ResponseJSON> {
 
 	private final static String URL =
 	//		"http://10.30.248.148:8080/GR50_MobileMoneyServer/MobileMoneyServer";
-			"http://172.16.250.153:8080/GR50_MobileMoneyServer/MobileMoneyServer";
-	// 		"http://192.168.51.103:8080/GR50_MobileMoneyServer/MobileMoneyServer";
+	//		"http://172.16.250.153:8080/GR50_MobileMoneyServer/MobileMoneyServer";
+	 		"http://192.168.51.103:8080/GR50_MobileMoneyServer/MobileMoneyServer";
 	
 	private MoneyActivity caller;
 	

@@ -1,0 +1,98 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Help" >
+
+        <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="@string/help"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TableLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/help_table"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/title"
+            android:weightSum="1.0" >
+    
+    <TableRow
+        android:layout_marginTop="20dp" >
+        
+         <TextView
+        android:id="@+id/send_money"
+        android:layout_width="0dp" 
+            android:layout_height="wrap_content" 
+            android:layout_weight=".30"
+        android:layout_margin="10dp"
+        android:text="@string/send_money" />
+        
+         <TextView
+        android:id="@+id/help_send_money"
+        android:layout_width="0dp" 
+            android:layout_height="wrap_content" 
+            android:layout_weight=".70"
+        android:layout_margin="10dp"
+        android:text="@string/help_send_money"/>
+    </TableRow>
+    
+    <TableRow
+        android:layout_marginTop="20dp" >
+        
+         <TextView
+        android:id="@+id/request_money"
+        android:layout_width="0dp" 
+            android:layout_height="wrap_content" 
+            android:layout_weight=".30"
+        android:layout_margin="10dp"
+        android:text="@string/request_money" />
+        
+         <TextView
+        android:id="@+id/help_request_money"
+        android:layout_width="0dp" 
+            android:layout_height="wrap_content" 
+            android:layout_weight=".70"
+        android:layout_margin="10dp"
+        android:text="@string/help_request_money"/>
+    </TableRow>
+    
+    <TableRow
+        android:layout_marginTop="20dp" >
+        
+         <TextView
+        android:id="@+id/accept_request"
+        android:layout_width="0dp" 
+            android:layout_height="wrap_content" 
+            android:layout_weight=".30"
+        android:layout_margin="10dp"
+        android:text="@string/accept_request" />
+        
+         <TextView
+        android:id="@+id/help_accept_request"
+        android:layout_width="0dp" 
+            android:layout_height="wrap_content" 
+            android:layout_weight=".70"
+        android:layout_margin="10dp"
+        android:text="@string/help_accept_request"/>
+    </TableRow>
+
+</TableLayout>
+
+                <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/help_table">
+            
+
+            <include
+                android:id="@+id/footer"
+                layout="@layout/footer" />
+        </RelativeLayout>
+        
+</RelativeLayout>

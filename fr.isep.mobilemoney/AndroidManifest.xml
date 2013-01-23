@@ -48,6 +48,10 @@
             android:name="fr.isep.mobilemoney.Withdrawal"
             android:label="@string/title_activity_withdrawal" >
         </activity>
+        <activity
+            android:name="fr.isep.mobilemoney.Help"
+            android:label="@string/title_activity_help" >
+        </activity>
     </application>
 
     <uses-permission android:name="android.permission.INTERNET" />
