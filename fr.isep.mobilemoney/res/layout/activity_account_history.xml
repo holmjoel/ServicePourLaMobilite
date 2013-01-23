@@ -3,7 +3,8 @@
     android:id="@+id/body"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AccountHistory" >
+    tools:context=".AccountHistory"
+    android:background="@drawable/backgroundnew3" >
 
     <TextView
         android:id="@+id/title"
