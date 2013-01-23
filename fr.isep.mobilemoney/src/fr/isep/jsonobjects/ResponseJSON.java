@@ -2,22 +2,30 @@ package fr.isep.jsonobjects;
 
 import java.util.List;
 
+
+import fr.isep.jsonobjects.Constants.MoneyAction;
+
 public class ResponseJSON {
+
+	
 
 	private boolean success, userExisted;
 	private long transactionNumber;
 	private String message;
 	private double balance, amount;
 	private List<Transaction> listOfTransactions;
-
+	private MoneyAction moneyAction;
+	
 	// getter and setter methods
 	public ResponseJSON() {
 
 	}
 
+	
+
 	public ResponseJSON(boolean success, boolean userExisted,
 			long transactionNumber, String message, double balance,
-			double amount, List<Transaction> listOfTransactions) {
+			double amount, List<Transaction> listOfTransactions, MoneyAction action) {
 		super();
 		this.success = success;
 		this.userExisted = userExisted;
@@ -26,7 +34,22 @@ public class ResponseJSON {
 		this.balance = balance;
 		this.amount = amount;
 		this.listOfTransactions = listOfTransactions;
+		this.moneyAction = action;
 	}
+
+
+
+	public MoneyAction getMoneyAction() {
+		return moneyAction;
+	}
+
+
+
+	public void setMoneyAction(MoneyAction action) {
+		this.moneyAction = action;
+	}
+
+
 
 	public boolean isSuccess() {
 		return success;

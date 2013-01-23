@@ -43,6 +43,12 @@
     <string name="money_recharged">Your mobile account has been recharged by %1$,.2f €.</string>
     <string name="money_withdrawed">You have withdrawed %1$,.2f € from your mobile account.</string>
     <string name="title_activity_withdrawal">Withdrawal</string>
+    <string name="title_activity_manage_alias">ManageAlias</string>
+    <string name="alias">Alias:</string>
+    <string name="enter_alias">Enter your desired alias</string>
+    <string name="update_alias">Update alias</string>
+    <string name="alias_changed">You\'ve successfully changed your alias to: </string>
+
     <string name="money_requested_sms">Hey, could you lend me %1$,.2f € ? If you can, just enter %2$d as the transaction number in "Accept Request" inside the Mobile Money app. Thanks!</string>
     <string name="money_sent_sms">Hey, I just sent you %1$,.2f € in the Mobile Money app!</string>
     <string name="title_activity_help">Help</string>
@@ -57,5 +63,4 @@
     <string name="help_invite">Fill in a mobile phone number and press OK.</string>
     <string name="help_log_out">Your session will have ended and you will be at the login screen.</string>
     <string name="thanks">Thanks for using Mobile Money!</string>
-
 </resources>

@@ -62,11 +62,16 @@ public abstract class MoneyActivity extends Activity {
 			case R.id.history:
 				activityIntent = new Intent(this, AccountHistory.class);
 				break;
+				
+			case R.id.manage_pseudo:
+				activityIntent = new Intent(this, ManageAlias.class);
+				break;
+			
 			
 			case R.id.login:
 				activityIntent = new Intent(this, LoginActivity.class);
 				break;
-				
+			
 			case R.id.main_menu:
 			default:
 				activityIntent = new Intent(this, MainActivity.class);
