@@ -59,9 +59,8 @@ public class SendMoneyActivity extends MoneyActivity {
 		Resources res = getResources();
 		
 		if (!response.isSuccess()) {
-			// TODO invite if user doens't exist
+			// TODO invite if user doesn't exist (?)
 			
-			SmsManagerWrapper.sendTextMessage(this.targetUser, "I just texted you because someone wants to send you money maddafaaaaakka");
 			message = response.getMessage();
 			/*if (!response.isUserExisted()) {
 				String moneySent = String.format(
@@ -79,6 +78,7 @@ public class SendMoneyActivity extends MoneyActivity {
 					res.getString(R.string.current_balance),
 					response.getBalance());
 			message = moneySent + " " + newBalance;
+			SmsManagerWrapper.sendTextMessage(this.targetUser, String.format(res.getString(R.string.money_sent_sms), amount));
 		}
 
 		goToScreen(R.id.main_menu, message);

@@ -57,11 +57,9 @@ public class RequestMoneyActivity extends MoneyActivity {
 		if (!response.isSuccess()) {
 			message = response.getMessage(); 
 		} else {
-			message = String.format(res.getString(R.string.money_requested),
-					amount, targetUser) + response.getTransactionNumber();
-			
-		} 
-		SmsManagerWrapper.sendTextMessage(this.targetUser, "I just texted you because someone want you money maddafaaaakka");
+			message = String.format(res.getString(R.string.money_requested), amount, targetUser);
+			SmsManagerWrapper.sendTextMessage(this.targetUser, String.format(res.getString(R.string.money_requested_sms), amount, response.getTransactionNumber()));
+		}
 		goToScreen(R.id.main_menu, message);
 	}
 

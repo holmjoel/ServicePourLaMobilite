@@ -49,6 +49,10 @@
             android:label="@string/title_activity_withdrawal" >
         </activity>
         <activity
+            android:name="fr.isep.mobilemoney.Help"
+            android:label="@string/title_activity_help" >
+        </activity>
+        <activity
             android:name="fr.isep.mobilemoney.ManageAlias"
             android:label="@string/title_activity_manage_alias" >
         </activity>

@@ -49,4 +49,18 @@
     <string name="update_alias">Update alias</string>
     <string name="alias_changed">You\'ve successfully changed your alias to: </string>
 
+    <string name="money_requested_sms">Hey, could you lend me %1$,.2f € ? If you can, just enter %2$d as the transaction number in "Accept Request" inside the Mobile Money app. Thanks!</string>
+    <string name="money_sent_sms">Hey, I just sent you %1$,.2f € in the Mobile Money app!</string>
+    <string name="title_activity_help">Help</string>
+    
+    
+    <string name="help_send_money">Fill in the mobile phone number (or registered alias) and amount and then press OK.</string>
+    <string name="help_request_money">Fill in the mobile phone number (or registered alias) and amount and then press OK.</string>
+    <string name="help_accept_request">Fill in the transaction number you received through SMS and then press OK.</string>
+    <string name="help_manage_account">Choose either deposit or withdraw, then put the amount and press OK.</string>
+    <string name="help_history">You will see your account history and current balance.</string>
+    <string name="help_manage_alias">Either press OK to delete your current alias or fill in your new alias and press OK.</string>
+    <string name="help_invite">Fill in a mobile phone number and press OK.</string>
+    <string name="help_log_out">Your session will have ended and you will be at the login screen.</string>
+    <string name="thanks">Thanks for using Mobile Money!</string>
 </resources>
