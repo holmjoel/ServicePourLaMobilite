@@ -63,17 +63,16 @@ public class AccountHistory extends MoneyActivity {
 		// Second parameter - Layout for the row
 		// Third parameter - ID of the TextView to which the data is written
 		// Forth - the Array of data
-
+		if(listOfTransactions != null){
 		String[] transactionsArray = new String[listOfTransactions.size()];
 		for(int i = 0; i < listOfTransactions.size(); i++){
 			transactionsArray[i] = listOfTransactions.get(i).toString();
 		}
 		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
 		  android.R.layout.simple_list_item_1, android.R.id.text1, transactionsArray);
-
 		// Assign adapter to ListView
 		listView.setAdapter(adapter); 
-		
+		}
 		//Set balance
 		TextView balance = (TextView) this.findViewById(R.id.accountBalance);
 		balance.setText("Account balance: " + response.getBalance());
