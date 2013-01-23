@@ -2,7 +2,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity" >
+    tools:context=".MainActivity"
+    android:background="@drawable/backgroundnew3" >
 
     <TextView
         android:id="@+id/title"
@@ -45,6 +46,8 @@
         android:layout_margin="20dp"
         android:text="@string/ok"
         android:ems="10"
-        android:onClick="login" />
+        android:onClick="login"
+        android:color="#2EFEF7"
+        android:alpha="1" />
 
 </RelativeLayout>
