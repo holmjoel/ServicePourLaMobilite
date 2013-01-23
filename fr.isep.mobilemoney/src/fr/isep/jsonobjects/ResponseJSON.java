@@ -11,10 +11,11 @@ public class ResponseJSON {
 
 	private boolean success, userExisted;
 	private long transactionNumber;
-	private String message;
+	private String message, phonenumber;
 	private double balance, amount;
 	private List<Transaction> listOfTransactions;
 	private MoneyAction moneyAction;
+	
 	
 	// getter and setter methods
 	public ResponseJSON() {
@@ -23,19 +24,49 @@ public class ResponseJSON {
 
 	
 
+	
+
+
+
 	public ResponseJSON(boolean success, boolean userExisted,
-			long transactionNumber, String message, double balance,
-			double amount, List<Transaction> listOfTransactions, MoneyAction action) {
+			long transactionNumber, String message, String phonenumber,
+			double balance, double amount,
+			List<Transaction> listOfTransactions, MoneyAction moneyAction) {
 		super();
 		this.success = success;
 		this.userExisted = userExisted;
 		this.transactionNumber = transactionNumber;
 		this.message = message;
+		this.phonenumber = phonenumber;
 		this.balance = balance;
 		this.amount = amount;
 		this.listOfTransactions = listOfTransactions;
-		this.moneyAction = action;
+		this.moneyAction = moneyAction;
 	}
+
+
+
+
+
+
+
+	public String getPhonenumber() {
+		return phonenumber;
+	}
+
+
+
+
+
+
+
+	public void setPhonenumber(String phonenumber) {
+		this.phonenumber = phonenumber;
+	}
+
+
+
+
 
 
 
